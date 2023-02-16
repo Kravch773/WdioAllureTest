@@ -15,7 +15,7 @@ jobs:
         run: npm run test1 # Our name of the headless script
       - name: Copy History
         if: always()
-        run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
+        run: mkdir -p allure-results/history && cp -r allure-report/history/* allure-results/history/ || true
       - name: Generate Report
         if: always()
         run: npm run allure:generate # Name of the allure generate script

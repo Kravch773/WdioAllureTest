@@ -1,2 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Feb 16 11:21:12 EET 2023","Thu Feb 16 11:21:17 EET 2023","5002","","My Login application","","My Login application","should login with valid credentials","should login with valid credentials",""
+"failed","Thu Feb 16 17:34:03 EET 2023","Thu Feb 16 17:34:04 EET 2023","845","","test 2","","test 2","test 2","test 2",""
+"passed","Thu Feb 16 17:34:04 EET 2023","Thu Feb 16 17:34:05 EET 2023","322","","test 2","","test 2","test 4","test 4",""
+"passed","Thu Feb 16 17:34:04 EET 2023","Thu Feb 16 17:34:04 EET 2023","346","","test 2","","test 2","test 3","test 3",""
