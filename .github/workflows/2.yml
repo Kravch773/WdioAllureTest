@@ -1,4 +1,4 @@
-name: test2
+name: test1_1
 on:
   workflow_dispatch:
 jobs:
