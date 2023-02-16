@@ -6,7 +6,7 @@ jobs:
       runs-on: ubuntu-20.04 # Choosing OS
       steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: '16.9.1' # In command line run “node -v” and choose your version
       - run: npm ci

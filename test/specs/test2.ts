@@ -1,5 +1,3 @@
-import LoginPage from '../pageobjects/login.page.js'
-import SecurePage from '../pageobjects/secure.page.js'
 
 describe('test 2', () => {
     it('test 2', async () => {
