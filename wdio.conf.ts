@@ -35,10 +35,10 @@ export const config: Options.Testrunner = {
     ],
     suites: {
         test1: [
-            './test/specs/assignments/test1.ts',
+            './test/specs/test1.ts',
         ],
         test2: [
-            './test/specs/assignments/test2.ts',
+            './test/specs/test2.ts',
         ]
     },
     // Patterns to exclude.
