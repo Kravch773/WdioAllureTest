@@ -1,22 +1,21 @@
-name: test 2
+name: test2
 on:
   workflow_dispatch:
 jobs:
-  Login_test: # Name of the job
+  test_suite: # Name of the job
       runs-on: ubuntu-20.04 # Choosing OS
       steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '16.9.1' # In command line run “node -v” and choose your version
-      - name: npm ci
-        run: npm ci
-     #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
-      - name: run test2
-        run: npm run test2 # name of the headless script
+      - run: npm ci
+#      - run: npm config set script-shell "C:\Program Files\Git\bin\bash.exe"
+      - name: run test
+        run: npm run test1 # Our name of the headless script
       - name: Copy History
         if: always()
-        run: cp -r $(pwd)/docs/qaReport/history/. $(pwd)/allure-results/history
+        run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
       - name: Generate Report
         if: always()
         run: npm run allure:generate # Name of the allure generate script
@@ -31,11 +30,11 @@ jobs:
         if: always()
         with:
           name: allure-report
-          path: ./allure-report       
+          path: allure-report        
       - name: Deploy report
         uses: JamesIves/github-pages-deploy-action@4.1.4
         if: always()
         with:
           branch: main # The branch the action should deploy to.
           folder: allure-report # The folder the action should deploy.
-          target-folder: ./docs/qaReport
+          target-folder: docs
