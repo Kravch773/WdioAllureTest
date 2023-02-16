@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1676556767713' stop='1676556772225'>
+    <name>test 2</name>
+    <title>test 2</title>
+    <test-cases>
+        <test-case start='1676556767714' status='failed' stop='1676556772224'>
+            <name>test 2</name>
+            <title>test 2</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-109.0.5414.119'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='29269824-59b8-4c4c-a473-87282bc0c73f-attachment.png' type='image/png' size='55800'/>
+            </attachments>
+            <failure>
+                <message>expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "pepega"
+                Received: "Google"</message>
+                <stack-trace>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "pepega"
+                Received: "Google"
+                    at Context.&lt;anonymous> (file:///home/runner/work/AllureTest/AllureTest/test/specs/test2.ts:10:42)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
