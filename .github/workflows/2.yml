@@ -1,4 +1,4 @@
-name: LoginTests
+name: test 2
 on:
   workflow_dispatch:
 jobs:

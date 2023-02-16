@@ -1,8 +1,6 @@
-name: LoginTests
+name: test 2
 on:
-  push:
-    branches:
-      - 'feature-8327' # (main branch) Set branch of the GH repo to push  
+  workflow_dispatch:
 jobs:
   Login_test: # Name of the job
       runs-on: ubuntu-20.04 # Choosing OS
@@ -17,9 +15,9 @@ jobs:
         working-directory: ${{env.working-directory}} 
         run: npm ci
      #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
-      - name: run loginTest
+      - name: run test1
         working-directory: ${{env.working-directory}}
-        run: npm run loginTest:headless # name of the headless script
+        run: npm run test1 # name of the headless script
       - name: Copy History
         if: always()
         run: cp -r $(pwd)/docs/qaReport/history/. $(pwd)/autoTests/allure-results/history
