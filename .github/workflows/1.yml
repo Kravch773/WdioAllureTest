@@ -4,25 +4,20 @@ on:
 jobs:
   Login_test: # Name of the job
       runs-on: ubuntu-20.04 # Choosing OS
-      env:
-        working-directory: ./autoTests
       steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '16.9.1' # In command line run “node -v” and choose your version
       - name: npm ci
-        working-directory: ${{env.working-directory}} 
         run: npm ci
      #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
       - name: run test1
-        working-directory: ${{env.working-directory}}
         run: npm run test1 # name of the headless script
       - name: Copy History
         if: always()
         run: cp -r $(pwd)/docs/qaReport/history/. $(pwd)/autoTests/allure-results/history
       - name: Generate Report
-        working-directory: ${{env.working-directory}}
         if: always()
         run: npm run allure:generate # Name of the allure generate script
       - name: Upload Results
