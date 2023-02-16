@@ -13,7 +13,7 @@
     "wdio-chromedriver-service": "^8.1.1"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts",
+    "wdio": "wdio run ./wdio.conf_2.ts",
     "test1": "./node_modules/.bin/wdio ./wdio.conf.ts --suite test1",
     "test2": "./node_modules/.bin/wdio ./wdio.conf.ts --suite test2",
     "allure:generate": "npx allure generate allure-results --clean",

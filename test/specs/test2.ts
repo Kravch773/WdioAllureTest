@@ -6,9 +6,9 @@ describe('test 2', () => {
         const p = $('//input');
         p.setValue("pepega");
         (await $('(//input[@name="btnK"])[2]')).click();
-        
-        await expect($("//div//h3").getText()).toContain("pepega");
-
+        console.log("test2-"+await browser.getTitle())
+        expect(await browser.getTitle()).toBe("pepega")
+    
     })
 })
 
