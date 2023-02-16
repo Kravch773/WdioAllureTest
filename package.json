@@ -16,11 +16,11 @@
     "wdio": "wdio run ./wdio.conf_2.ts",
     "test1": "./node_modules/.bin/wdio ./wdio.conf.ts --suite test1",
     "test2": "./node_modules/.bin/wdio ./wdio.conf.ts --suite test2",
-    "allure:generate": "npx allure generate allure-results",
+    "allure:generate": "npx allure generate allure-results --clean",
     "allure:open": "allure open"
   },
   "dependencies": {
-    "@wdio/cli": "^7.25.1",
+    "@wdio/cli": "^7.25.1", 
     "chromedriver": "^110.0.0",
     "clipboard": "^2.0.11",
     "wdio": "^6.0.1",
