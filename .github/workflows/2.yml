@@ -11,8 +11,8 @@ jobs:
           node-version: '16.9.1' # In command line run “node -v” and choose your version
       - run: npm ci
 #      - run: npm config set script-shell "C:\Program Files\Git\bin\bash.exe"
-      - name: run test
-        run: npm run test1 # Our name of the headless script
+      - name: run test2
+        run: npm run test2 # Our name of the headless script
       - name: Copy History
         if: always()
         run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
