@@ -1,0 +1,47 @@
+name: LoginTests
+on:
+  push:
+    branches:
+      - 'feature-8327' # (main branch) Set branch of the GH repo to push  
+jobs:
+  Login_test: # Name of the job
+      runs-on: ubuntu-20.04 # Choosing OS
+      env:
+        working-directory: ./autoTests
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.9.1' # In command line run “node -v” and choose your version
+      - name: npm ci
+        working-directory: ${{env.working-directory}} 
+        run: npm ci
+     #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
+      - name: run loginTest
+        working-directory: ${{env.working-directory}}
+        run: npm run loginTest:headless # name of the headless script
+      - name: Copy History
+        if: always()
+        run: cp -r $(pwd)/docs/qaReport/history/. $(pwd)/autoTests/allure-results/history
+      - name: Generate Report
+        working-directory: ${{env.working-directory}}
+        if: always()
+        run: npm run allure:generate # Name of the allure generate script
+      - name: Upload Results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: allure-results
+          path: ./autoTests/allure-results # Name of the folder with allure results                    
+      - name: Publishing Allure artifact to Github Actions
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: allure-report
+          path: autoTests/allure-report       
+      - name: Deploy report
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: always()
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: autoTests/allure-report # The folder the action should deploy.
