@@ -31,14 +31,6 @@ jobs:
         with:
           name: allure-report
           path: allure-report
-      - name: Deploy 🚀 copy of rep
-        if: always()
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          branch: main # The branch the action should deploy to.
-          folder: allure-report # The folder the action should deploy.
-          force: false
-          target-folder: docs
       - name: Deploy 🚀
         if: always()
         uses: JamesIves/github-pages-deploy-action@v4.4.1
