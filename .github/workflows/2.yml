@@ -13,9 +13,9 @@ jobs:
 #      - run: npm config set script-shell "C:\Program Files\Git\bin\bash.exe"
       - name: run test2
         run: npm run test2 # Our name of the headless script
-      - name: Copy History
-        if: always()
-        run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
+      # - name: Copy History
+      #   if: always()
+      #   run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
       - name: Generate Report
         if: always()
         run: npm run allure:generate # Name of the allure generate script
