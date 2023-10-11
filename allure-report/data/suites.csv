@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Thu Feb 16 17:34:03 EET 2023","Thu Feb 16 17:34:04 EET 2023","845","","test 2","","test 2","test 2","test 2",""
-"passed","Thu Feb 16 17:34:04 EET 2023","Thu Feb 16 17:34:05 EET 2023","322","","test 2","","test 2","test 4","test 4",""
-"passed","Thu Feb 16 17:34:04 EET 2023","Thu Feb 16 17:34:04 EET 2023","346","","test 2","","test 2","test 3","test 3",""
