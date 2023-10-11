@@ -4,9 +4,9 @@
 
 import chalk from 'chalk';
 import { editAsync } from 'external-editor';
-import Base from './base.js';
-import observe from '../utils/events.js';
 import { Subject } from 'rxjs';
+import observe from '../utils/events.js';
+import Base from './base.js';
 
 export default class EditorPrompt extends Base {
   /**
@@ -74,7 +74,9 @@ export default class EditorPrompt extends Base {
   startExternalEditor() {
     // Pause Readline to prevent stdin and stdout from being modified while the editor is showing
     this.rl.pause();
-    editAsync(this.currentText, this.endExternalEditor.bind(this));
+    editAsync(this.currentText, this.endExternalEditor.bind(this), {
+      postfix: this.opt.postfix ?? '.txt',
+    });
   }
 
   endExternalEditor(error, result) {

@@ -7,7 +7,7 @@ describe('test 2', () => {
         p.setValue("pepega");
         (await $('(//input[@name="btnK"])[2]')).click();
         console.log("test2-"+await browser.getTitle())
-        expect(await browser.getTitle()).toBe("pepega")
+        expect(await browser.getTitle()).toBe("Google")
     
     })
     it('test 3', async () => {

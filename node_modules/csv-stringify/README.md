@@ -1,7 +1,7 @@
 
 # CSV stringifier for Node.js and the web
 
-[![Build Status](https://img.shields.io/github/workflow/status/adaltas/node-csv/Node.js)](https://github.com/adaltas/node-csv/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master)](https://github.com/adaltas/node-csv/actions)
 [![NPM](https://img.shields.io/npm/dm/csv-stringify)](https://www.npmjs.com/package/csv-stringify)
 [![NPM](https://img.shields.io/npm/v/csv-stringify)](https://www.npmjs.com/package/csv-stringify)
 
@@ -32,7 +32,7 @@ data sets by a large community.
 
 ## Usage
 
-Run `npm install csv` to install the full csv module or run `npm install csv-stringify` if you are only interested by the CSV stringifier.
+Run `npm install csv` to install the full CSV module or run `npm install csv-stringify` if you are only interested by the CSV stringifier.
 
 The module is built on the Node.js Stream API. Use the callback and sync APIs for simplicity or the stream based API for scalability.
 
