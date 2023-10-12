@@ -1,5 +1,5 @@
 import type { Options } from '@wdio/types'
-
+import { browser } from '@wdio/globals'
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -8,8 +8,10 @@ export const config: Options.Testrunner = {
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
     autoCompileOpts: {
+        autoCompile: true,
         tsNodeOpts: {
-            project: './tsconfig.json'
+            project: './tsconfig.json',
+            transpileOnly: true
         }
     },
     
@@ -35,10 +37,10 @@ export const config: Options.Testrunner = {
     ],
     suites: {
         test1: [
-            './test/specs/test1.ts',
+            './test/specs/elements.spec.ts',
         ],
         test2: [
-            './test/specs/test2.ts',
+            './test/specs/practiceForm.spec.ts',
         ]
     },
     // Patterns to exclude.
@@ -67,6 +69,9 @@ export const config: Options.Testrunner = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+    // capabilities: [{
+    //     browserName: 'chrome'
+    // }],
     capabilities: [{
         maxInstances: 1,
         browserName: "chrome",
@@ -143,6 +148,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
+    // reporters: ['spec'],
     reporters: [['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
