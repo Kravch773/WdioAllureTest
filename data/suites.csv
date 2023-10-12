@@ -1,2 +1,7 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Oct 11 19:46:42 UTC 2023","Wed Oct 11 19:46:45 UTC 2023","2711","","test 1","","","","test 1",""
+"passed","Thu Oct 12 08:02:50 UTC 2023","Thu Oct 12 08:02:52 UTC 2023","1582","","Test Elements Page","","","","check text box",""
+"passed","Thu Oct 12 08:02:54 UTC 2023","Thu Oct 12 08:02:55 UTC 2023","1083","","Test Elements Page","","","","Verify Check boxes",""
+"passed","Thu Oct 12 08:02:53 UTC 2023","Thu Oct 12 08:02:54 UTC 2023","1098","","Test Elements Page","","","","Verify empty text boxes after page refresh",""
+"passed","Thu Oct 12 08:02:52 UTC 2023","Thu Oct 12 08:02:53 UTC 2023","1075","","Test Elements Page","","","","Verify edit text boxes",""
+"passed","Thu Oct 12 08:02:47 UTC 2023","Thu Oct 12 08:02:50 UTC 2023","3097","","Test Elements Page","","","","Go to Elements page and check text box",""
+"passed","Thu Oct 12 08:02:55 UTC 2023","Thu Oct 12 08:02:56 UTC 2023","553","","Test Elements Page","","","","Verify Radio buttons ",""
